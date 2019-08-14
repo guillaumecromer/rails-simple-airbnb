@@ -20,6 +20,19 @@ class FlatsController < ApplicationController
   end
 
   def show
+
+  end
+
+  def edit
+
+  end
+
+  def update
+    if @flat.update(flat_params)
+      redirect_to @flat, notice: 'Flat was successfully updated.'
+    else
+      render :edit
+    end
   end
 
 private
@@ -29,6 +42,6 @@ private
   end
 
   def flat_params
-    params.require(:restaurant).permit(:name, :address, :category, :phone_number)
+    params.require(:flat).permit(:name, :address, :description, :price_per_night, :number_of_guest)
   end
 end
