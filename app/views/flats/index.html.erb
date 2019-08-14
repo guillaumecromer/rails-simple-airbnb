@@ -1,0 +1,24 @@
+<h3>Simple Airbnb</h3>
+
+<h1>All our flats (<%= @flats.size %>) </h1>
+
+<div class="cards">
+  <% @flats.each do |flat| %>
+  <div class="card-flat">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-flat-infos">
+    <div>
+      <h3><strong><%= flat.name %></strong></h3>
+      <p><%= flat.address %></p>
+      <i class="fas fa-user-friends"> </i><%= flat.number_of_guests %>
+      <i class="fas fa-euro-sign"> </i><%= flat.price_per_night %>
+    </div>
+  </div>
+  <p class="more-info"> more info </p>
+</div>
+<% end %>
+</div>
+
+
+
+

@@ -1,0 +1,83 @@
+// Place all the styles related to the Flats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.card-flat {
+  overflow: hidden;
+  background-color: lightgrey;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-flat > img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-flat h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-flat p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.card-flat .card-flat-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-flat-infos i {
+  padding: 5px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.cards .more-info {
+  padding: 15px;
+  background-color: white;
+  color: black;
+}
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
